@@ -12,12 +12,13 @@
         <p class="mt-4"><%= blog.body %></p>
     </div>
     <div class="container mt-4">
-        <img src="<%= blog.createdBy.profileImageURL  %> " width="50px"/><% =blog.createdBy.fullName %>
+        <img src="<%= blog.createdBy.profileImageURL  %> " width="50px"/><%=blog.createdBy.fullName %>
     </div>
       <div class="container mt-4">
         <h1>Comments</h1>
         <% if (locals.user) { %>
-         <form action="/blog/comment/<% = blog.-id %>" method="post" >
+         <form action="/blog/comment/<%= blog._id %>" method="post" >
+
              <div class="mb-3">
           
           <input
